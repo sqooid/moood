@@ -68,8 +68,10 @@
 		"@oslojs/encoding": "^1.1.0",
 		"arctic": "^3.7.0",
 		"drizzle-orm": "^0.40.1",
+		"image-size": "^2.0.2",
 		"jsonwebtoken": "^9.0.2",
-		"postgres": "^3.4.5"
+		"postgres": "^3.4.5",
+		"svelte-moveable": "^0.45.0"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [

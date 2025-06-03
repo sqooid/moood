@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Input from '$lib/components/ui/input/input.svelte';
+	import Board from './board.svelte';
 
 	const onSelectFiles = async (event: any) => {
 		console.log('File selection event:', event);
@@ -23,3 +24,5 @@
 <Button href="/login/google">Log in with Google</Button>
 
 <Input type="file" onchange={onSelectFiles} multiple accept="image/*" />
+
+<Board />
