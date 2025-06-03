@@ -18,7 +18,14 @@
 		"db:migrate": "drizzle-kit migrate",
 		"db:studio": "drizzle-kit studio",
 		"deploy": "pnpm run build && wrangler pages deploy",
-		"cf-typegen": "wrangler types src/worker-configuration.d.ts"
+		"cf-typegen": "wrangler types src/worker-configuration.d.ts",
+		"generate": "drizzle-kit generate",
+		"list": "wrangler d1 migrations list moood-db --local",
+		"list:preview": "wrangler d1 migrations list moood-db --env preview",
+		"list:production": "wrangler d1 migrations list moood-db --env production",
+		"apply": "wrangler d1 migrations apply moood-db --local",
+		"apply:preview": "wrangler d1 migrations apply moood-db --env preview",
+		"apply:production": "wrangler d1 migrations apply moood-db --env production"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -29,6 +36,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.4",
+		"@types/jsonwebtoken": "^9.0.9",
 		"@types/node": "^20",
 		"drizzle-kit": "^0.30.2",
 		"eslint": "^9.18.0",
@@ -47,9 +55,12 @@
 		"wrangler": "^4.18.0"
 	},
 	"dependencies": {
+		"@libsql/client": "^0.15.8",
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
-		"drizzle-orm": "^0.40.0",
+		"arctic": "^3.7.0",
+		"drizzle-orm": "^0.40.1",
+		"jsonwebtoken": "^9.0.2",
 		"postgres": "^3.4.5"
 	},
 	"pnpm": {
