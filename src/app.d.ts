@@ -2,7 +2,7 @@
 declare global {
 	namespace App {
 		interface Platform {
-			env: Env & { DB: D1Database };
+			env: Env & { DB: D1Database; BUCKET: R2Bucket };
 			cf: CfProperties;
 			ctx: ExecutionContext;
 		}

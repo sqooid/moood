@@ -7,4 +7,14 @@ export const user = sqliteTable('user', {
 	username: text('username')
 });
 
+export const board = sqliteTable('board', {
+	id: integer('id').primaryKey(),
+	uuid: text('uuid').unique(),
+	name: text('name'),
+	ownerId: integer('owner_id').references(() => user.id),
+	state: text('state').notNull()
+});
+
 export type User = typeof user.$inferSelect;
+
+export type Board = typeof board.$inferSelect;

@@ -18,6 +18,12 @@
 			"migrations_dir": "./drizzle"
 		}
 	],
+	"r2_buckets": [
+		{
+			"bucket_name": "moood-bucket",
+			"binding": "BUCKET"
+		}
+	],
 	"env": {
 		"production": {
 			"d1_databases": [
@@ -27,7 +33,7 @@
 					"database_id": "ecf7cb11-ea33-47d6-9453-270bb076c75f",
 					"migrations_dir": "./drizzle"
 				}
-			]
+			],
 		}
 	}
 	/**
